@@ -18,6 +18,8 @@
             <p class="card-description">
             List data fakultas
             </p>
+            {{-- tombol tambah --}}
+            <a href="{{ route('fakultas.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
             <div class="table-responsive">
               <table class="table">
                 <thead>
