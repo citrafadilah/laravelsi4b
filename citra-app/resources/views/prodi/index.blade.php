@@ -20,7 +20,7 @@
 
 @extends('layout.main')
 
-@section('title', 'Fakultas')
+@section('title', 'Prodi')
 
 @section('content')
 <div class="row">
@@ -31,6 +31,8 @@
             <p class="card-description">
             List data program studi
             </p>
+            {{-- tombol tambah --}}
+            <a href="{{ route('prodi.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
             <div class="table-responsive">
               <table class="table">
                 <thead>
@@ -55,4 +57,15 @@
         </div>
       </div>
 </div>
+@if (session('success'))
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    Swal.fire({
+      title: "Good job!",
+      text: "{{ session('success')}}",
+      icon: "success"
+    });
+  </script>
+@endif
+
 @endsection
